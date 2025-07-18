@@ -19,16 +19,18 @@ public class Address {
     @Column(nullable = false)
     private String cep;
 
-    @Column(nullable = false)
-    private String number;
-
-    private String neighborhood;
+    private String rua;
 
     @Column(nullable = false)
-    private String city;
+    private String numero;
 
     @Column(nullable = false)
-    private String state;
+    private String estado;
+
+    @Column(nullable = false)
+    private String cidade;
+
+    private String bairro;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
